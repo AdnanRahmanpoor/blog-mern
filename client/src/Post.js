@@ -1,4 +1,4 @@
-const Post = () => {
+const Post = ({ title, summary, cover, content }) => {
   return (
     <>
       <div className='post'>
@@ -10,8 +10,7 @@ const Post = () => {
         </div>
         <div className='text'>
           <h2>
-            Goodbye mysterious military space plane, and good luck &#8210;
-            wherever you&apos;re going
+            {title}
           </h2>
           <p className='info'>
             <a href='' className='author'>
@@ -20,9 +19,7 @@ const Post = () => {
             <time>2023-12-31 03:22</time>
           </p>
           <p className='summary'>
-            SpaceX&apos;s Falcon Heavy rocket launched a secretive military
-            spaceplane to orbit last night after weeks of delays, though scant
-            details about the mission have been released to the public.
+            {summary}
           </p>
         </div>
       </div>
