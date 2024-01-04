@@ -1,4 +1,4 @@
-import {formatISO9075} from 'date-fns'
+import {format} from 'date-fns'
 
 const Post = ({ title, summary, cover, content, createdAt }) => {
   return (
@@ -16,7 +16,7 @@ const Post = ({ title, summary, cover, content, createdAt }) => {
             <a href='' className='author'>
               Adnan
             </a>
-            <time>{formatISO9075(new Date(createdAt))}</time>
+            <time>{format(new Date(createdAt), 'MMM d, yyyy HH:MM')}</time>
           </p>
           <p className='summary'>{summary}</p>
         </div>
