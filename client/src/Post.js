@@ -1,4 +1,6 @@
-const Post = ({ title, summary, cover, content }) => {
+import {formatISO9075} from 'date-fns'
+
+const Post = ({ title, summary, cover, content, createdAt }) => {
   return (
     <>
       <div className='post'>
@@ -9,18 +11,14 @@ const Post = ({ title, summary, cover, content }) => {
           />
         </div>
         <div className='text'>
-          <h2>
-            {title}
-          </h2>
+          <h2>{title}</h2>
           <p className='info'>
             <a href='' className='author'>
               Adnan
             </a>
-            <time>2023-12-31 03:22</time>
+            <time>{formatISO9075(new Date(createdAt))}</time>
           </p>
-          <p className='summary'>
-            {summary}
-          </p>
+          <p className='summary'>{summary}</p>
         </div>
       </div>
     </>
